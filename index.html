@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorian Jayne Kuperman | Educator & Technology Founder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f8f6;
+            --accent: #8b6f47;
+            --accent-light: #c9b394;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --border: #e0ddd5;
+            
+            /* Bold Jewel Tone Backgrounds */
+            --jewel-emerald: #d4edda;
+            --jewel-sapphire: #cce5ff;
+            --jewel-ruby: #f8d7da;
+            --jewel-amethyst: #e7d4f0;
+            --jewel-topaz: #fff3cd;
+            --jewel-emerald-dark: #0f5132;
+            --jewel-sapphire-dark: #084298;
+            --jewel-ruby-dark: #842029;
+            --jewel-amethyst-dark: #6c2d7c;
+            --jewel-topaz-dark: #997404;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--primary-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(248, 248, 246, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--primary-dark);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-text .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero-links a {
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border: 1px solid var(--accent);
+        }
+
+        .hero-links .primary-btn {
+            background: var(--accent);
+            color: white;
+        }
+
+        .hero-links .primary-btn:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .hero-links .secondary-btn {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .hero-links .secondary-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background-image: url('bg-pink-stripes.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(248, 248, 246, 0.85);
+            z-index: 0;
+        }
+
+        #about > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-intro {
+            display: flex;
+            align-items: flex-start;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2.5rem;
+            background: white;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .childhood-photo {
+            width: 220px;
+            height: auto;
+            border: 3px solid var(--jewel-emerald-dark);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+        }
+
+        .photo-caption {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--jewel-emerald-dark);
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0;
+            align-self: center;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .about-content p:not(.photo-caption):first-of-type::first-letter {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            line-height: 0.8;
+            float: left;
+            margin: 0.1em 0.1em 0 0;
+            color: var(--jewel-emerald-dark);
+        }
+
+        /* Education Section */
+        #education {
+            background-image: url('bg-floral.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #education::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(248, 248, 246, 0.9);
+            z-index: 0;
+        }
+
+        #education > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .education-credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .credential-card {
+            background: white;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--jewel-amethyst-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .credential-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .credential-card h3 {
+            font-size: 1.5rem;
+            color: var(--jewel-amethyst-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .credential-card .institution {
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .credential-card p {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .teaching-work {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .teaching-work > h3 {
+            font-size: 2.2rem;
+            color: var(--jewel-amethyst-dark);
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .teaching-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .teaching-item h4 {
+            font-size: 1.6rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .teaching-item .role {
+            font-weight: 500;
+            color: var(--jewel-amethyst-dark);
+            margin-bottom: 1rem;
+        }
+
+        .teaching-item p {
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .teaching-item ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .teaching-item li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Grid */
+        #portfolio {
+            background-image: url('bg-blue-stripes.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #portfolio::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(248, 248, 246, 0.88);
+            z-index: 0;
+        }
+
+        #portfolio > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--jewel-sapphire-dark);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .portfolio-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .portfolio-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .portfolio-card a {
+            color: var(--jewel-sapphire-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .portfolio-card a:hover {
+            gap: 1rem;
+        }
+
+        .portfolio-card a::after {
+            content: '→';
+            font-size: 1.2rem;
+        }
+
+        /* Featured In Press */
+        #featured-in {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+        }
+
+        .featured-press {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .press-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: padding-left 0.3s ease;
+        }
+
+        .press-item:hover {
+            padding-left: 1rem;
+        }
+
+        .press-item a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .press-item a:hover {
+            color: var(--jewel-topaz-dark);
+        }
+
+        .press-source {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        /* CV Section */
+        #cv {
+            background-image: url('bg-pink-stripes.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        #cv::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(248, 248, 246, 0.92);
+            z-index: 0;
+        }
+
+        #cv > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cv-section {
+            margin-bottom: 4rem;
+        }
+
+        .cv-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--jewel-ruby-dark);
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--accent-light);
+        }
+
+        .cv-item {
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--border);
+            transition: border-color 0.3s ease;
+        }
+
+        .cv-item:hover {
+            border-left-color: var(--jewel-ruby-dark);
+        }
+
+        .cv-item h4 {
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-item .position {
+            font-weight: 500;
+            color: var(--jewel-ruby-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-item .dates {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            font-style: italic;
+        }
+
+        .cv-item p, .cv-item ul {
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .cv-item ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .cv-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Creative Section Details */
+        .creative-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 2rem;
+            background: white;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .creative-intro h3 {
+            font-size: 1.8rem;
+            color: var(--jewel-sapphire-dark);
+            margin-bottom: 1rem;
+        }
+
+        .creative-intro p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .creative-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.6);
+            border-left: 3px solid var(--jewel-sapphire-dark);
+        }
+
+        .skill-card h4 {
+            font-size: 1.2rem;
+            color: var(--jewel-sapphire-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-intro {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .childhood-photo {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-links {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">dorian jayne</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#featured-in">Featured In</a></li>
+                <li><a href="#cv">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>dorian jayne</h1>
+                <p class="subtitle">Educator & Former Technology Founder</p>
+                <p class="tagline">From building companies to building futures—one classroom at a time.</p>
+                <div class="hero-links">
+                    <a href="#about" class="primary-btn">Learn More</a>
+                    <a href="#cv" class="secondary-btn">View CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://static.wixstatic.com/media/3cb1b6_b2fc72b1df174ba7b6f8f7d65da79489~mv2.jpg/v1/crop/x_11,y_13,w_596,h_839/fill/w_362,h_510,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5370_JPG.jpg" alt="Dorian Jayne Kuperman">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-intro">
+                <img src="childhood-photo.jpg" alt="Young Dorian in black turtleneck" class="childhood-photo">
+                <p class="photo-caption">It's the same old story—I can't resist a classic black turtleneck.</p>
+            </div>
+            
+            <p>My path to education began with a paper route at age ten, delivering the Boston Globe—a foundational experience that taught me about work ethic, community, and showing up consistently. That early lesson has shaped everything since.</p>
+
+            <p>For over a decade, I built technology companies, led diverse teams, and worked on workforce development initiatives in Oakland and San Francisco. As founder and CEO of BriteHub, I raised $2.5M and scaled a platform to over 10,000 users. I served on workforce development boards, spoke at national conferences, and collaborated with incredible people tackling complex community challenges.</p>
+
+            <p>But my most fulfilling work has always involved young people—from nannying to creating job training programs for transitional youth, from mentoring high school interns to helping underserved students access manufacturing careers. These experiences revealed my true calling: teaching.</p>
+
+            <p>Today, I'm completing my M.Ed. at Lesley University while teaching across K-12 classrooms in Massachusetts. As a future high school English teacher, I'm committed to bringing my experience navigating complex systems and building inclusive environments to support students facing systemic barriers.</p>
+
+            <p>I believe in the transformative power of public education and the critical role teachers play in creating opportunity. My journey from technology to teaching reflects my commitment to making meaningful change at the grassroots level—in classrooms where individual connections transform lives.</p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-header">
+            <h2>Education</h2>
+            <p>Teaching work, curriculum development, and educational credentials</p>
+        </div>
+
+        <div class="education-credentials">
+            <div class="credential-card">
+                <h3>Master of Education (M.Ed.)</h3>
+                <p class="institution">Lesley University | Expected Spring 2027</p>
+                <p>Focusing on Child & Adolescent Development with emphasis on Universal Design for Learning, educational equity, and inclusive teaching practices. Coursework includes policy analysis on UDL implementation, career technical education funding, and developmental theory applied to diverse student populations.</p>
+            </div>
+
+            <div class="credential-card">
+                <h3>Massachusetts Teaching License</h3>
+                <p class="institution">In Progress</p>
+                <p>Working toward initial teaching license for high school English. Will be updated upon completion.</p>
+            </div>
+
+            <div class="credential-card">
+                <h3>Additional Certifications</h3>
+                <p class="institution">Various</p>
+                <p>Additional educational certifications and professional development will be listed here as completed.</p>
+            </div>
+        </div>
+
+        <div class="teaching-work">
+            <h3>Teaching Experience & Work</h3>
+            
+            <div class="teaching-item">
+                <h4>Substitute Teaching - K-12</h4>
+                <p class="role">Massachusetts Public Schools | Current</p>
+                <p>Gaining hands-on experience across diverse grade levels and subject areas. Developing expertise in classroom management, differentiated instruction, and supporting students with varied learning needs.</p>
+            </div>
+
+            <div class="teaching-item">
+                <h4>Academic Projects</h4>
+                <p class="role">Graduate Coursework</p>
+                <ul>
+                    <li>Comprehensive policy brief examining UDL implementation challenges in schools</li>
+                    <li>Analysis of Massachusetts BRIGHT Act funding for career technical education programs</li>
+                    <li>Research connecting developmental theory to practical teaching applications</li>
+                    <li>Discussion board contributions on educational equity and inclusive practices</li>
+                </ul>
+            </div>
+
+            <div class="teaching-item">
+                <h4>Teaching Artifacts</h4>
+                <p class="role">Curriculum & Lesson Plans</p>
+                <p><em>Lesson plans, curriculum development, and teaching materials will be added here as they are developed.</em></p>
+            </div>
+
+            <div class="teaching-item">
+                <h4>Educational Philosophy</h4>
+                <p>My teaching approach is grounded in Universal Design for Learning and a commitment to educational equity. I believe in creating inclusive classroom environments where all students can access rigorous content and develop as critical thinkers. Drawing on my experience building systems and leading diverse teams, I bring a unique perspective to supporting students facing systemic barriers in urban public schools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="section-header">
+            <h2>Portfolio</h2>
+            <p>A collection of work spanning technology, design, leadership, creative pursuits, and publication.</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3>Technology</h3>
+                <p>Product development, platform architecture, and scaling technology solutions that served thousands of users across manufacturing and workforce development sectors.</p>
+                <a href="#technology-work">View Technology Projects</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Design</h3>
+                <p>Product design research, user experience development, and creative problem-solving that bridges technical constraints with human needs.</p>
+                <a href="#design-work">See Design Work</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Leadership</h3>
+                <p>Building and leading diverse teams, workforce development initiatives, and collaborative community partnerships focused on creating pathways to opportunity.</p>
+                <a href="#leadership-work">Explore Leadership</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Creative</h3>
+                <p>A passion for design history, mid-century modern and Art Deco furnishings, curating collections, and connecting with fellow design enthusiasts through storytelling and objects.</p>
+                <a href="#creative-work">View Creative Work</a>
+            </div>
+            <div class="portfolio-card">
+                <h3>Publication</h3>
+                <p>Written work, presentations, and thought leadership on education, technology, workforce development, and inclusive design practices.</p>
+                <a href="#publications">Read Publications</a>
+            </div>
+        </div>
+
+        <!-- Creative Section Detail -->
+        <div class="creative-intro" id="creative-work">
+            <h3>Creative: Design History & Collecting</h3>
+            <p>My love for design spans modern, mid-century, and Art Deco aesthetics. This passion began while studying industrial design and deepened during my time as General Manager at Mod Livin', a premier retail space dedicated to mid-century furnishings. This experience enhanced my knowledge of design history and sparked my interest in curatorial studies.</p>
+            
+            <p>In 2020, I was accepted into the Parsons Graduate Program for decorative arts but chose instead to blend my passion for design with my enthusiasm for technology. My collecting journey has been one of personal satisfaction and community connection—I began selling at the Alameda Flea Market in California, which became a perfect creative outlet to connect with fellow design enthusiasts and share stories behind each carefully curated piece.</p>
+            
+            <p>For two consecutive years, I attended the International Contemporary Furniture Fair (ICFF) in New York, fueling my passion for acquiring unique pieces. I continue to pursue estate sales and auctions, always seeking objects with historical significance and contemporary relevance.</p>
+
+            <div class="creative-skills">
+                <div class="skill-card">
+                    <h4>Aesthetic Vision</h4>
+                    <p>Profound ability to recognize and appreciate the nuances of modern and Art Deco styles, with a keen eye for mid-century designs.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Curatorial Expertise</h4>
+                    <p>Skilled in selecting and curating diverse design pieces that resonate with historical significance and contemporary relevance.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Storytelling Through Objects</h4>
+                    <p>Ability to weave compelling narratives around each piece, enhancing its value and appeal to collectors.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Customer Engagement</h4>
+                    <p>Proficient in creating immersive experiences and fostering connections through shared passion and knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured In Section -->
+    <section id="featured-in">
+        <div class="section-header">
+            <h2>Featured In</h2>
+            <p>Press coverage and media recognition</p>
+        </div>
+        <div class="featured-press">
+            <div class="press-item">
+                <a href="https://www.dwell.com/article/heres-whats-cooking-in-a-few-of-the-countrys-hottest-design-incubators-a2c98226" target="_blank">
+                    "Here's What's Cooking in a Few of the Country's Hottest Design Incubators,"
+                </a>
+                <span class="press-source">dwell.com (2016)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://companyweek.com/article/craft-giant-etsy-invites-manufacturers-to-the-party" target="_blank">
+                    "Craft giant Etsy invites manufacturers to the party,"
+                </a>
+                <span class="press-source">CW Company Week (2015)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://adsknews.autodesk.com/en/pressrelease/autodesk-unveils-cloud-based-forge-initiative-to-transform-how-products-are-designed-made-and-used/" target="_blank">
+                    "Autodesk Unveils Cloud-based Forge Initiative to Transform How Products are Designed, Made and Used,"
+                </a>
+                <span class="press-source">CIMdata The Leader in PLM Education, Research & Strategic Management Consulting (2015)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://www.newsweek.com/2014/05/16/13-women-business-bet-250378.html" target="_blank">
+                    "13 Women in Business to Bet On,"
+                </a>
+                <span class="press-source">Newsweek Magazine (2014)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://www.builtincolorado.com/blog/boulder-founded-elihuu-positions-national-expansion" target="_blank">
+                    "Boulder-founded Elihuu positions for national expansion,"
+                </a>
+                <span class="press-source">Built In Colorado (2014)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://medium.com/@bznotes/16-women-you-need-to-know-about-who-founded-hardware-software-startups-3563bf18e518" target="_blank">
+                    "16 Women You Need to Know About (Who Founded Hardware/Software Startups),"
+                </a>
+                <span class="press-source">Medium.com (2014)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://www.bloomberg.com/news/articles/2013-11-07/small-shop-hiring-fueled-by-3-printers-to-iphone-tools" target="_blank">
+                    "Small-Shop Hiring Fueled by 3-D Printers to iPhone Tools,"
+                </a>
+                <span class="press-source">Bloomberg.com (2013)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://www.denverpost.com/2013/05/10/techstars-boulder-class-to-include-four-denver-area-startups/" target="_blank">
+                    "TechStars Boulder class to include four Denver area startups,"
+                </a>
+                <span class="press-source">Denver Post (2013)</span>
+            </div>
+            
+            <div class="press-item">
+                <a href="https://www.5280.com/transparent-design/" target="_blank">
+                    "Transparent Design,"
+                </a>
+                <span class="press-source">5280 Mile-High Magazine (2012)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+        <div class="section-header">
+            <h2>Curriculum Vitae</h2>
+            <p>An integrated journey from technology entrepreneurship to education.</p>
+        </div>
+
+        <div class="cv-section">
+            <h3>Education & Credentials</h3>
+            <div class="cv-item">
+                <h4>Lesley University</h4>
+                <p class="position">Master of Education (M.Ed.), Child & Adolescent Development</p>
+                <p class="dates">Expected Spring 2027</p>
+                <p>Focus on Universal Design for Learning, educational equity, career technical education, and inclusive teaching practices for urban public schools. Completed comprehensive policy analysis and research connecting developmental theory to classroom practice.</p>
+            </div>
+            <div class="cv-item">
+                <h4>Massachusetts Teaching License</h4>
+                <p class="position">Initial License - High School English (In Progress)</p>
+                <p class="dates">Expected 2027</p>
+                <p>Working toward initial teaching license for secondary English education.</p>
+            </div>
+            <div class="cv-item">
+                <h4>Additional Certifications</h4>
+                <p class="position">Professional Development</p>
+                <p><em>Additional educational certifications will be listed here as completed.</em></p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Teaching Experience</h3>
+            <div class="cv-item">
+                <h4>Massachusetts Public Schools</h4>
+                <p class="position">Substitute Teacher, K-12</p>
+                <p class="dates">Current</p>
+                <p>Teaching across diverse grade levels and subject areas in Massachusetts public schools. Developing expertise in classroom management, differentiated instruction, and supporting students with varied learning needs. Gaining practical experience that informs graduate studies and future work as a high school English teacher.</p>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Technology & Entrepreneurship</h3>
+            <div class="cv-item">
+                <h4>BriteHub</h4>
+                <p class="position">Founder & CEO</p>
+                <p class="dates">Past</p>
+                <ul>
+                    <li>Founded and scaled manufacturing technology platform to over 10,000 users</li>
+                    <li>Raised $2.5M in venture funding</li>
+                    <li>Built and led diverse teams across product, engineering, and operations</li>
+                    <li>Developed partnerships with manufacturing facilities and educational institutions</li>
+                    <li>Created pathways for underserved communities to access advanced manufacturing</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Workforce Development & Community Leadership</h3>
+            <div class="cv-item">
+                <h4>Workforce Development Boards</h4>
+                <p class="position">Board Member & Advisor</p>
+                <p class="dates">Oakland & San Francisco</p>
+                <ul>
+                    <li>Served on workforce development boards focused on youth employment and career pathways</li>
+                    <li>Created job training programs for transitional youth</li>
+                    <li>Mentored high school interns and emerging professionals</li>
+                    <li>Developed partnerships between education and industry sectors</li>
+                    <li>Spoke at national conferences on workforce development and inclusive hiring</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Design & Creative Work</h3>
+            <div class="cv-item">
+                <h4>Mod Livin'</h4>
+                <p class="position">General Manager</p>
+                <p class="dates">Past</p>
+                <ul>
+                    <li>Managed premier retail space dedicated to mid-century furnishings and design</li>
+                    <li>Attended International Contemporary Furniture Fair (ICFF) in New York for two consecutive years</li>
+                    <li>Developed expertise in modern, mid-century, and Art Deco design history</li>
+                    <li>Curated collections and created immersive retail experiences</li>
+                </ul>
+            </div>
+            <div class="cv-item">
+                <h4>Independent Curator & Collector</h4>
+                <p class="position">Alameda Flea Market & Estate Sales</p>
+                <p class="dates">Ongoing</p>
+                <ul>
+                    <li>Sold curated design pieces at Alameda Flea Market in California</li>
+                    <li>Built connections with design enthusiasts through storytelling and shared passion</li>
+                    <li>Sourced unique pieces through estate sales and auctions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Areas of Expertise</h3>
+            <div class="cv-item">
+                <ul>
+                    <li><strong>Education:</strong> Universal Design for Learning (UDL), educational equity, differentiated instruction, high school English, urban public education, career technical education (CTE)</li>
+                    <li><strong>Technology:</strong> Product development, platform architecture, user experience design, scaling systems</li>
+                    <li><strong>Leadership:</strong> Team building, inclusive hiring practices, organizational development, strategic planning</li>
+                    <li><strong>Workforce Development:</strong> Youth employment programs, career pathway development, industry-education partnerships, mentorship</li>
+                    <li><strong>Design & Curation:</strong> Mid-century modern, Art Deco, design history, curatorial expertise, aesthetic vision</li>
+                    <li><strong>Community Engagement:</strong> Collaborative partnerships, systemic change initiatives, equity-focused program design</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h3>Core Values & Approach</h3>
+            <div class="cv-item">
+                <p>My work is grounded in the belief that transformative change happens at the grassroots level—in classrooms, mentorship relationships, and community partnerships. I bring a systems-thinking approach honed through years of building technology and leading teams, now applied to supporting students facing systemic barriers in public education.</p>
+                <p>From my first paper route at age ten to founding a venture-backed company to pursuing my calling as an educator, I've learned that showing up consistently, building inclusive environments, and creating pathways to opportunity are the cornerstones of meaningful impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2027 Dorian Jayne Kuperman. All rights reserved.</p>
+        <p><a href="mailto:djkuperman@gmail.com">djkuperman@gmail.com</a> | <a href="https://www.linkedin.com/in/dferlauto/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe portfolio cards and CV items
+        document.querySelectorAll('.portfolio-card, .cv-item, .credential-card, .teaching-item, .press-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
